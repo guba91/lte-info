@@ -1,7 +1,7 @@
 const descriptions = {
 
     sinr:
-    "Qualità del segnale rispetto a rumore e interferenze. È il parametro principale per capire quanto il collegamento è pulito.",
+    "Qualità del segnale rispetto a rumore e interferenze. Quanto il collegamento è pulito.",
 
 
     rsrq:
@@ -17,7 +17,7 @@ const descriptions = {
 
 
     sssinr:
-    "Qualità del segnale 5G rispetto a rumore e interferenze.",
+    "Qualità del segnale 5G rispetto a rumore e interferenze. Quanto il collegamento è pulito.",
 
 
     ssrsrq:
