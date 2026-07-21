@@ -1,3 +1,33 @@
+const descriptions = {
+
+    sinr:
+    "Qualità del segnale rispetto a rumore e interferenze. È il parametro principale per capire quanto il collegamento è pulito.",
+
+
+    rsrq:
+    "Qualità del segnale ricevuto considerando interferenze e condizioni della cella.",
+
+
+    rsrp:
+    "Potenza del segnale radio LTE ricevuto dal modem.",
+
+
+    rssi:
+    "Potenza totale ricevuta: comprende segnale utile, rumore e interferenze.",
+
+
+    sssinr:
+    "Qualità del segnale 5G rispetto a rumore e interferenze.",
+
+
+    ssrsrq:
+    "Qualità della portante radio 5G ricevuta.",
+
+
+    ssrsrp:
+    "Potenza del segnale 5G ricevuto."
+};
+
 const inputs = document.querySelectorAll("input");
 
 inputs.forEach(input => {
@@ -255,7 +285,16 @@ function draw(prefix,value,obj){
     status.className =
     "status "+obj.class;
 
+    let info =
+    document.getElementById(prefix+"Info");
 
+
+    if(info){
+
+        info.innerText =
+        descriptions[prefix];
+
+    }
 
 
     let bar =
