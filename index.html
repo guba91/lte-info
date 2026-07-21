@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LTE / 5G Signal Analyzer</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📶 LTE / 5G Signal Analyzer</h1>
+
+<div class="subtitle">
+Analisi qualità segnale radio cellulare
+</div>
+
+
+<!-- LTE SECTION -->
+
+<div class="section-title">
+LTE (4G)
+</div>
+
+<div class="card">
+
+<div class="grid">
+
+
+<div class="field">
+<label>SINR (dB)</label>
+<input type="number" id="sinr" placeholder="es. 18">
+</div>
+
+
+<div class="field">
+<label>RSRQ (dB)</label>
+<input type="number" id="rsrq" placeholder="es. -10">
+</div>
+
+
+<div class="field">
+<label>RSRP (dBm)</label>
+<input type="number" id="rsrp" placeholder="es. -92">
+</div>
+
+
+<div class="field">
+<label>RSSI (dBm)</label>
+<input type="number" id="rssi" placeholder="es. -70">
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- 5G SECTION -->
+
+<div class="section-title">
+5G NR
+</div>
+
+
+<div class="card">
+
+<div class="grid">
+
+
+<div class="field">
+<label>SS-SINR (dB)</label>
+<input type="number" id="sssinr" placeholder="es. 20">
+</div>
+
+
+<div class="field">
+<label>SS-RSRQ (dB)</label>
+<input type="number" id="ssrsrq" placeholder="es. -9">
+</div>
+
+
+<div class="field">
+<label>SS-RSRP (dBm)</label>
+<input type="number" id="ssrsrp" placeholder="es. -85">
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+<!-- RESULTS -->
+
+<div id="results" class="hidden">
+
+
+<div class="card">
+
+
+<h2>LTE (4G)</h2>
+
+
+<div class="metric">
+
+<div class="metric-header">
+<span>SINR</span>
+<span id="sinrValue"></span>
+</div>
+
+<div class="bar">
+<div id="sinrBar" class="fill"></div>
+</div>
+
+<div id="sinrStatus" class="status"></div>
+
+</div>
+
+
+
+<div class="metric">
+
+<div class="metric-header">
+<span>RSRQ</span>
+<span id="rsrqValue"></span>
+</div>
+
+<div class="bar">
+<div id="rsrqBar" class="fill"></div>
+</div>
+
+<div id="rsrqStatus" class="status"></div>
+
+</div>
+
+
+
+<div class="metric">
+
+<div class="metric-header">
+<span>RSRP</span>
+<span id="rsrpValue"></span>
+</div>
+
+<div class="bar">
+<div id="rsrpBar" class="fill"></div>
+</div>
+
+<div id="rsrpStatus" class="status"></div>
+
+</div>
+
+
+
+<div class="metric">
+
+<div class="metric-header">
+<span>RSSI</span>
+<span id="rssiValue"></span>
+</div>
+
+<div class="bar">
+<div id="rssiBar" class="fill"></div>
+</div>
+
+<div id="rssiStatus" class="status"></div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>5G NR</h2>
+
+
+
+<div class="metric">
+
+<div class="metric-header">
+<span>SS-SINR</span>
+<span id="sssinrValue"></span>
+</div>
+
+<div class="bar">
+<div id="sssinrBar" class="fill"></div>
+</div>
+
+<div id="sssinrStatus" class="status"></div>
+
+</div>
+
+
+
+<div class="metric">
+
+<div class="metric-header">
+<span>SS-RSRQ</span>
+<span id="ssrsrqValue"></span>
+</div>
+
+<div class="bar">
+<div id="ssrsrqBar" class="fill"></div>
+</div>
+
+<div id="ssrsrqStatus" class="status"></div>
+
+</div>
+
+
+
+<div class="metric">
+
+<div class="metric-header">
+<span>SS-RSRP</span>
+<span id="ssrsrpValue"></span>
+</div>
+
+<div class="bar">
+<div id="ssrsrpBar" class="fill"></div>
+</div>
+
+<div id="ssrsrpStatus" class="status"></div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card score-card">
+
+
+<div class="score-title">
+Qualità complessiva
+</div>
+
+
+<div id="score" class="score">
+--/100
+</div>
+
+
+<div id="scoreStatus" class="scoreStatus">
+Inserire valori
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
